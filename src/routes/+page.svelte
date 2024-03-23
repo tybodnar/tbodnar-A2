@@ -34,20 +34,39 @@
      </div>
 </form>
 
-<ul>
-     {#each todoList as item, index}
-          <li>
-               <input type="checkbox" bind:checked={item.done}>
+<div class="centerList">
 
-               <span class:done={item.done} >{item.text}</span>
-               <span on:click={() => removeThis(index)} class="remove" role="button" tabindex="0">&times;</span>
-          </li>
-     {/each}
-</ul>
+</div>
 
-{#if isDone.length > 0}
-     <button on:click={clearDone}>Remove Done</button>
-{/if}
+<!-- WORKING HERE -->
+
+<div class="centerList">
+
+     <ul>
+          {#each todoList as item, index}
+               <li>
+                    <input type="checkbox" bind:checked={item.done}>
+
+                    <span class:done={item.done} >{item.text}</span>
+                    <span on:click={() => removeThis(index)} class="remove" role="button" tabindex="0">&times;</span>
+               </li>
+          {/each}
+     </ul>
+
+</div>
+
+<!-- WORKING HERE -->
+
+
+
+<div class="center">
+     {#if isDone.length > 0}
+     <button style="align-items: center; display: flex; justify-content: center;" on:click={clearDone}>Remove Done</button>
+     {/if}
+</div>
+
+
+
 
 <style>
      ul {
@@ -81,6 +100,12 @@
           display: flex;
           justify-content: center;
           gap: 10px;
+          color: black;
+     }
+
+     .centerList{
+          background-color: rebeccapurple;
+          padding: 0vw 20vw;
      }
 
 </style>

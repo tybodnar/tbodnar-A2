@@ -25,6 +25,8 @@
      }
 </script>
 
+
+
 <h1>To Do List</h1>
 
 <form on:submit|preventDefault={addToArray}  class="flex">
@@ -74,7 +76,7 @@
           padding-bottom: 2.5vw;
      }
      .done {
-          opacity: 25%;
+          opacity: 40%;
           text-decoration: line-through;
      }
      .remove {
@@ -114,7 +116,7 @@
 
     
      button {
-          background-color: #3170d6;
+          background-color: #0275ff;
           border: none;
           color: white;
           padding: 18px 32px;
@@ -138,14 +140,19 @@
      }
 
      input[type=text]:focus {
-          border: 3px solid #3170d6;
+          border: 3px solid #0275ff;
      }
 
      
 
      input[type=checkbox] {
           cursor: pointer;
+          height: 25px;
+          width: 25px;
+          background-color: #ffffff;
      }
+
+     
 
 
      @media only screen and (max-width: 1150px){
@@ -162,6 +169,12 @@
           }
           input[type=text] {
           width: 60%;
+          }
+          html, body {
+               overflow-x: hidden !important;
+          }
+          body{
+               position: relative;
           }
      }
 
